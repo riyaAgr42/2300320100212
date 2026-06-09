@@ -1,0 +1,32 @@
+##stage4
+## Caching Strategy
+
+### Problem
+
+Every notification request directly hits the database,
+causing high database load.
+
+### Solution
+
+Use Redis Cache.
+
+Flow:
+
+Client → Backend → Redis → Database
+
+### Cache Hit
+
+Data is returned directly from Redis.
+
+### Cache Miss
+
+Backend fetches data from database,
+stores it in Redis,
+and returns the response.
+
+### Benefits
+
+- Faster response time
+- Reduced database load
+- Better scalability
+- Improved user experience

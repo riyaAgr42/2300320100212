@@ -1,0 +1,27 @@
+##stage5
+## Bulk Notification Processing
+
+### Problem
+
+Sending notifications directly to thousands of students
+is slow and can overload the server.
+
+### Solution
+
+Use a message queue such as RabbitMQ, Kafka, or BullMQ.
+
+### Flow
+
+Admin
+→ Notification Service
+→ Queue
+→ Workers
+→ Students
+
+### Benefits
+
+- Faster processing
+- Retry mechanism
+- Fault tolerance
+- Better scalability
+- Reduced server load

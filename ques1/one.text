@@ -1,0 +1,44 @@
+##stage1
+
+# Student Notification System
+
+## Functional Requirements
+
+- View notifications
+- Filter notifications
+- Mark notification as read
+- Mark all notifications as read
+- Pagination support
+
+## APIs
+
+### GET /notifications
+
+Purpose:
+Fetch notifications.
+
+Query Params:
+- page
+- limit
+- type
+
+Response:
+(json)
+
+### POST /notifications
+
+Purpose:
+Create notification.
+
+Response:
+(json)
+
+### PATCH /notifications/:id/read
+
+Purpose:
+Mark notification as read.
+
+### PATCH /notifications/read-all
+
+Purpose:
+Mark all notifications as read.

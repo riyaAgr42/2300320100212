@@ -1,0 +1,24 @@
+##stage2
+## Database Design
+
+### Database
+PostgreSQL
+
+### Table: notifications
+
+Fields:
+- id (UUID, Primary Key)
+- student_id (BIGINT)
+- type (VARCHAR)
+- message (TEXT)
+- is_read (BOOLEAN)
+- created_at (TIMESTAMP)
+
+### Indexes
+
+1. student_id
+2. (student_id, is_read, created_at)
+
+Reason:
+These indexes optimize notification retrieval,
+filtering unread notifications, and sorting by time.

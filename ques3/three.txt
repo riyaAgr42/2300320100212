@@ -1,0 +1,32 @@
+##stage3
+## Query Optimization
+
+### Problem
+
+The query:
+
+SELECT *
+FROM notifications
+WHERE student_id=123
+AND is_read=false
+ORDER BY created_at ASC;
+
+is slow because it performs a full table scan on millions of records.
+
+### Solution
+
+Create a composite index:
+
+CREATE INDEX idx_notification
+ON notifications(student_id,is_read,created_at);
+
+### Benefits
+
+- Faster filtering
+- Faster sorting
+- Reduced database load
+- Improved response time
+
+### Note
+
+Index only frequently queried columns because excessive indexes increase storage and slow write operations.

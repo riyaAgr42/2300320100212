@@ -1,0 +1,44 @@
+##stage 6
+
+## Priority Inbox
+
+### Goal
+
+Show the most important notifications first.
+
+### Priority Order
+
+1. Placement
+2. Result
+3. Event
+
+### Ranking Strategy
+
+Score =
+Priority Weight +
+Recency Weight
+
+Example:
+
+Placement = 100
+Result = 70
+Event = 40
+
+### Process
+
+1. Fetch notifications
+2. Calculate score
+3. Sort by score
+4. Return top results
+
+### Pagination
+
+Supported query parameters:
+
+- page
+- limit
+- notificationType
+
+Example:
+
+GET /notifications?page=1&limit=10&notificationType=placement
